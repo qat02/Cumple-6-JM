@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Invitación Minecraft</title>
 
+  <!-- 🖼️ PREVIEW DEL LINK -->
+  <meta property="og:title" content="🎮 Ven a Celebrar en Modo Minecraft">
+  <meta property="og:description" content="Da clic y confirma tu asistencia">
+  <meta property="og:image" content="https://qat02.github.io/Cumple-6/banner.png">
+<meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://qat02.github.io/Cumple-6/">
+  <meta property="og:type" content="website">
+
   <style>
     * {
       box-sizing: border-box;
@@ -135,7 +143,6 @@
       box-shadow: 0 2px 0 #135d1a;
     }
 
-    /* ✨ EFECTO BRILLO */
     @keyframes brillo {
       0% { box-shadow: 0 0 0px #39cf48; }
       50% { box-shadow: 0 0 20px #39cf48; }
@@ -189,13 +196,13 @@
       </div>
 
       <!-- BOTÓN -->
-      <a class="btn" href="https://forms.gle/hPQqSoP4MS6sHKdT6" target="_blank" rel="noopener">
+      <a class="btn" href="https://forms.gle/hPQqSoP4MS6sHKdT6" target="_blank">
         ✅ Confirmar asistencia
       </a>
 
       <!-- DATOS -->
       <div class="details">
-        <p>📅 Sábado 16 de marzo</p>
+        <p>📅 Sábado 16 de mayo</p>
         <p>⏰ 1:30 p. m.</p>
         <p>📍 Calle Benito Juárez 1407, Miguel Hidalgo, 80090 Culiacán Rosales, Sin.</p>
       </div>
@@ -218,7 +225,6 @@
     const sonido = document.getElementById("sonidoClick");
     const video = document.querySelector("video");
 
-    // SONIDO UNA VEZ
     boton.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -232,7 +238,6 @@
       }, 150);
     });
 
-    // BRILLO AL PAUSAR O TERMINAR VIDEO
     video.addEventListener("pause", () => {
       boton.classList.add("btn-brillo");
     });
@@ -241,7 +246,6 @@
       boton.classList.add("btn-brillo");
     });
 
-    // QUITA BRILLO SI VUELVEN A REPRODUCIR
     video.addEventListener("play", () => {
       boton.classList.remove("btn-brillo");
     });
