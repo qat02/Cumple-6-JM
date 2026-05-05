@@ -200,15 +200,24 @@
   <!-- 🔊 SONIDO -->
   <audio id="sonidoClick" src="click.mp3"></audio>
 
-  <script>
-    const boton = document.querySelector(".btn");
-    const sonido = document.getElementById("sonidoClick");
+<script>
+  const boton = document.querySelector(".btn");
+  const sonido = document.getElementById("sonidoClick");
 
-    boton.addEventListener("click", function () {
+  boton.addEventListener("click", function (e) {
+    e.preventDefault(); // evita que se vaya inmediatamente
+
+    if (sonido.paused) {
       sonido.currentTime = 0;
       sonido.play();
-    });
-  </script>
+    }
+
+    // después de un pequeño tiempo abre el link
+    setTimeout(() => {
+      window.open(boton.href, "_blank");
+    }, 150); // puedes ajustar tiempo
+  });
+</script>
 
 </body>
 </html>
