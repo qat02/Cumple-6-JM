@@ -172,21 +172,22 @@
       <div class="video-wrap">
         <video controls playsinline preload="auto">
           <source src="invitacion.mp4" type="video/mp4" />
-          Tu navegador no puede reproducir este video.
         </video>
       </div>
 
+      <!-- BOTÓN -->
+      <a class="btn" href="https://forms.gle/hPQqSoP4MS6sHKdT6" target="_blank" rel="noopener">
+        ✅ Confirmar asistencia
+      </a>
+
+      <!-- DATOS -->
       <div class="details">
         <p>📅 Sábado 16 de marzo</p>
         <p>⏰ 1:30 p. m.</p>
         <p>📍 Calle Benito Juárez 1407, Miguel Hidalgo, 80090 Culiacán Rosales, Sin.</p>
       </div>
 
-      <a class="btn" href="https://forms.gle/hPQqSoP4MS6sHKdT6" target="_blank" rel="noopener">
-        ✅ Confirmar asistencia
-      </a>
-
-      <div class="blocks" aria-hidden="true">
+      <div class="blocks">
         <div class="block b1"></div>
         <div class="block b2"></div>
         <div class="block b3"></div>
@@ -195,5 +196,19 @@
       </div>
     </section>
   </main>
+
+  <!-- 🔊 SONIDO -->
+  <audio id="sonidoClick" src="click.mp3"></audio>
+
+  <script>
+    const boton = document.querySelector(".btn");
+    const sonido = document.getElementById("sonidoClick");
+
+    boton.addEventListener("click", function () {
+      sonido.currentTime = 0;
+      sonido.play();
+    });
+  </script>
+
 </body>
 </html>
